@@ -1,3 +1,5 @@
+//! The module with Obographs types.
+
 #[cfg(feature = "serde")]
 use serde::{Deserialize, Serialize};
 

@@ -1,14 +1,12 @@
 #[cfg(all(test, feature = "serde"))]
 mod tests {
-    use std::{error::Error, path::Path};
+    use std::error::Error;
 
     use obographs::model::GraphDocument;
 
     #[test]
     fn test_from_path() -> Result<(), Box<dyn Error>> {
-        let path = Path::new("tests/test_data/hp.mini.json");
-
-        let graph_document = GraphDocument::from_path(path)?;
+        let graph_document = GraphDocument::from_path("tests/test_data/hp.mini.json")?;
 
         assert_eq!(graph_document.graphs.len(), 1);
 
