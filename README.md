@@ -8,7 +8,7 @@ to support parsing Obographs JSON files.
 Therefore, the following should be added into `Cargo.toml` file:
 
 ```toml
-obographs = {git = 'https://github.com/ielis/obographs.git', tag = 'v0.1.0', features = ["serde"]}
+obographs = {git = 'https://github.com/ielis/obographs.git', tag = 'v0.2.0', features = ["serde"]}
 ```
 
 **WARNING**
