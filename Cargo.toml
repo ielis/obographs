@@ -1,6 +1,6 @@
 [package]
 name = "obographs"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -8,9 +8,10 @@ edition = "2021"
 [dependencies]
 serde = {version = "1.0.188", features = ["derive"], optional = true}
 serde_json = {version = "1.0.81", optional = true }
+anyhow = {version = "1.0", optional = true}
 
 [features]
-serde = ["dep:serde", "dep:serde_json"]
+serde = ["dep:serde", "dep:serde_json", "dep:anyhow"]
 
 [dev-dependencies]
 criterion = "0.5.1"
