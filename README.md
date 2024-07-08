@@ -8,7 +8,7 @@ to support parsing Obographs JSON files.
 Therefore, the following should be added into `Cargo.toml` file:
 
 ```toml
-obographs = {git = 'https://github.com/ielis/obographs.git', tag = 'v0.1.0', features = ["serde"]}
+obographs = {git = 'https://github.com/ielis/obographs.git', tag = 'v0.2.0', features = ["serde"]}
 ```
 
 **WARNING**
@@ -44,7 +44,7 @@ into a [`obographs::model::GraphDocument`] by running:
 use obographs::model::GraphDocument;
 
 let toy_hpo_json = "tests/test_data/hp.mini.json";
-let graph_document = GraphDocument::from_path(toy_hpo_json).expect("Read JSON from path");
+let graph_document = GraphDocument::from_path(toy_hpo_json).expect("Read graph document from file path");
 
 assert_eq!(graph_document.graphs.len(), 1);
 ```
