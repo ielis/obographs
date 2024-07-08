@@ -44,7 +44,7 @@ into a [`obographs::model::GraphDocument`] by running:
 use obographs::model::GraphDocument;
 
 let toy_hpo_json = "tests/test_data/hp.mini.json";
-let graph_document = GraphDocument::from_path(toy_hpo_json).expect("Read JSON from path");
+let graph_document = GraphDocument::from_path(toy_hpo_json).expect("Read graph document from file path");
 
 assert_eq!(graph_document.graphs.len(), 1);
 ```
