@@ -2,18 +2,20 @@
 
 Crate with definitions of Obographs types and I/O functions.
 
-Typically, the library should be used with `serde` feature enabled
-to support parsing Obographs JSON files.
 
-Therefore, the following should be added into `Cargo.toml` file:
+## Examples
+
+### How to use
+
+Obographs-dev is deployed on `crates.io`, so including in a project is really easy.
+Just add the following into your `Cargo.toml` file:
 
 ```toml
-obographs-dev = {version = '0.2.1', features = ["serde"]}
+obographs-dev = "0.2.1"
 ```
 
 > Note: Check `crates.io` for the latest version and update `0.2.1` accordingly.
 
-## Examples
 
 ### Create an Obographs type
 
@@ -33,8 +35,8 @@ let edge = Edge {
 
 ### Read an Obographs JSON file
 
-With `serde` feature enabled, we can read a JSON file 
-into a [`obographs::model::GraphDocument`] by running:
+The `serde` feature is enabled by default,
+to support reading a JSON file into a [`obographs::model::GraphDocument`]:
 
 ```rust
 use obographs_dev::model::GraphDocument;
@@ -47,16 +49,16 @@ assert_eq!(graph_document.graphs.len(), 1);
 
 ## Tests and benches
 
-Run tests with:
+Run the unit, integration, and documentation tests with:
 
 ```shell
-cargo test --features serde
+cargo test
 ```
 
 The benchmarks can be run with: 
 
 ```shell
-cargo bench --features serde
+cargo bench
 ```
 
 ## Disclaimer
