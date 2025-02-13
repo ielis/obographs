@@ -1,6 +1,6 @@
 [package]
 name = "obographs-dev"
-version = "0.2.1"
+version = "0.2.2-dev0"
 description = "Load Obographs data files."
 keywords = ["Obographs", "ontology", "bioinformatics"]
 edition = "2021"
