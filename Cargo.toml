@@ -1,7 +1,16 @@
 [package]
 name = "obographs-dev"
 version = "0.2.1"
+description = "Load Obographs data files."
+keywords = ["Obographs", "ontology", "bioinformatics"]
 edition = "2021"
+
+homepage = "https://github.com/ielis/obographs-dev"
+repository = "https://github.com/ielis/obographs-dev"
+readme = "README.md"
+license-file = "LICENSE"
+
+authors = ["Daniel Danis <daniel.gordon.danis@protonmail.com>"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
