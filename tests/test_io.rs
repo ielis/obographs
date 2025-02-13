@@ -2,7 +2,7 @@
 mod tests {
     use std::error::Error;
 
-    use obographs::model::GraphDocument;
+    use obographs_dev::model::GraphDocument;
 
     #[test]
     fn test_from_path() -> Result<(), Box<dyn Error>> {
