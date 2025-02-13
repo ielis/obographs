@@ -1,6 +1,6 @@
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
 
-use obographs::model::GraphDocument;
+use obographs_dev::model::GraphDocument;
 
 // The HPO to use for benchmarks.
 const HPO_URL: &'static str = "https://github.com/obophenotype/human-phenotype-ontology/releases/download/v2023-10-09/hp.json";
