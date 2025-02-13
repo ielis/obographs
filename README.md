@@ -1,4 +1,4 @@
-# obographs
+# obographs-dev
 
 Crate with definitions of Obographs types and I/O functions.
 
@@ -8,14 +8,10 @@ to support parsing Obographs JSON files.
 Therefore, the following should be added into `Cargo.toml` file:
 
 ```toml
-obographs = {git = 'https://github.com/ielis/obographs.git', tag = 'v0.2.0', features = ["serde"]}
+obographs-dev = {version = '0.2.1', features = ["serde"]}
 ```
 
-**WARNING**
-
-The implementation of the Obographs model is **INCOMPLETE** 
-and the project is in *alpha* stage and is subject to changes with **NO WARNING**.
-
+> Note: Check `crates.io` for the latest version and update `0.2.1` accordingly.
 
 ## Examples
 
@@ -25,7 +21,7 @@ The Obographs elements can be created programatically.
 For instance, the [`obographs::model::Edge`] can be created as:
 
 ```rust
-use obographs::model::*;
+use obographs_dev::model::*;
 
 let edge = Edge {
   sub: String::from("http://purl.obolibrary.org/obo/HP_0001250"),
@@ -41,7 +37,7 @@ With `serde` feature enabled, we can read a JSON file
 into a [`obographs::model::GraphDocument`] by running:
 
 ```rust
-use obographs::model::GraphDocument;
+use obographs_dev::model::GraphDocument;
 
 let toy_hpo_json = "tests/test_data/hp.mini.json";
 let graph_document = GraphDocument::from_path(toy_hpo_json).expect("Read graph document from file path");
@@ -49,14 +45,21 @@ let graph_document = GraphDocument::from_path(toy_hpo_json).expect("Read graph d
 assert_eq!(graph_document.graphs.len(), 1);
 ```
 
-## Run tests
+## Tests and benches
+
+Run tests with:
 
 ```shell
 cargo test --features serde
 ```
 
-## Run benches
+The benchmarks can be run with: 
 
 ```shell
 cargo bench --features serde
 ```
+
+## Disclaimer
+
+The implementation of the Obographs model is **INCOMPLETE**.
+Attributes and components may be missing.
